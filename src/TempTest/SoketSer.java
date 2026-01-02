@@ -11,7 +11,8 @@ import java.net.Socket;
  * @create 2025/12/31-15:41
  */
 public class SoketSer {
-    public static void main(String[] args) throws IOException {
+
+    SoketSer() throws IOException, InterruptedException {
         System.out.println("这里是服务端以下是外部发送过来的内容:");
         InputStreamReader isr = null;
         InputStream inputStream = null;
@@ -24,11 +25,7 @@ public class SoketSer {
         inputStream = accept.getInputStream();
         isr = new InputStreamReader(inputStream);
         for (; ; ) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            System.out.println("(判断read方法是否阻塞)正在等待接收:--"+System.currentTimeMillis());
             if ((len = isr.read(buffer)) != -1) {
                 String text = new String(buffer, 0, len);
                 System.out.println(text);
@@ -38,36 +35,6 @@ public class SoketSer {
         isr.close();
         accept.close();
         serverSocket.close();
-    }
-
-    SoketSer() throws IOException, InterruptedException {
-        System.out.println("这里是服务端以下是外部发送过来的内容:");
-        InputStreamReader isr = null;
-        InputStream inputStream = null;
-        Socket accept = null;
-        char[] buffer = new char[10];
-        int len;
-        int index = 0;
-        ServerSocket serverSocket = new ServerSocket(8899);
-        Thread.sleep(90000);//1
-//        accept = serverSocket.accept();
-//        inputStream = accept.getInputStream();
-//        isr = new InputStreamReader(inputStream);
-//        for (; ; ) {
-//            try {
-//                Thread.sleep(1000);
-//            } catch (InterruptedException e) {
-//                throw new RuntimeException(e);
-//            }
-//            if ((len = isr.read(buffer)) != -1) {
-//                String text = new String(buffer, 0, len);
-//                System.out.println(text);
-//                if (text.contains("e")) break;
-//            }
-//        }
-//        isr.close();
-//        accept.close();
-//        serverSocket.close();
     }
 
 }
