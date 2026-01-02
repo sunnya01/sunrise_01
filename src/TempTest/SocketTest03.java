@@ -1,0 +1,14 @@
+package TempTest;
+
+import java.io.IOException;
+
+/**
+ * @author sunchaowei
+ * @create 2025/12/31-16:57
+ */
+public class SocketTest03 {
+    public static void main(String[] args) throws IOException {
+        System.out.println("启用客户端");
+        SocketCli socketCli = new SocketCli();
+    }
+}
