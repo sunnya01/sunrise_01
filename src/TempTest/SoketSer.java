@@ -49,7 +49,7 @@ public class SoketSer {
         int len;
         int index = 0;
         ServerSocket serverSocket = new ServerSocket(8899);
-        Thread.sleep(90000);
+        Thread.sleep(90000);//1
 //        accept = serverSocket.accept();
 //        inputStream = accept.getInputStream();
 //        isr = new InputStreamReader(inputStream);
