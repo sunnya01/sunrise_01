@@ -1,7 +1,4 @@
-package TempTest;
-
-import com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetCodec;
-import sun.plugin2.message.Serializer;
+package proxyTest;
 
 import java.io.*;
 

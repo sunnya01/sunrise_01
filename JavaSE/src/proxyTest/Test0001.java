@@ -1,11 +1,14 @@
-package TempTest;
+package proxyTest;
+
+import TempTest.IntFace01;
+import TempTest.IntFace02;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.lang.reflect.InvocationHandler;
 
-public class Test0001 implements IntFace01,IntFace02 {
+public class Test0001 implements IntFace01, IntFace02 {
 
     @Override
     public void print01() {
