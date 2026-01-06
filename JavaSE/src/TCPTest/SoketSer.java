@@ -1,4 +1,4 @@
-package TempTest;
+package TCPTest;
 
 import java.io.IOException;
 import java.io.InputStream;

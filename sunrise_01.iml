@@ -33,5 +33,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="com.primeton.esb.governor.sam.service.online-8.6.0.0-GA" level="application" />
   </component>
 </module>
