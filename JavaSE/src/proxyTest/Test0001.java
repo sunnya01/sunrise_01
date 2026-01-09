@@ -1,7 +1,5 @@
 package proxyTest;
 
-import TempTest.IntFace01;
-import TempTest.IntFace02;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
